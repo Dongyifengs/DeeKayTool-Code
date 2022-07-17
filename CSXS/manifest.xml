@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0" ExtensionBundleId="com.mds.deekay-tool-extension" ExtensionBundleVersion="1.1.4" ExtensionBundleName="DeeKay Tool" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <ExtensionList>
+    <Extension Id="com.mds.deekay-tool-extension.panel" Version="1.1.4" />
+  </ExtensionList>
+
+  <ExecutionEnvironment>
+    <HostList>
+      <Host Name="AEFT" Version="16.0" />
+    </HostList>
+
+    <LocaleList>
+      <Locale Code="All" />
+    </LocaleList>
+
+    <RequiredRuntimeList>
+      <RequiredRuntime Name="CSXS" Version="7.0" />
+    </RequiredRuntimeList>
+  </ExecutionEnvironment>
+
+  <DispatchInfoList>
+    <Extension Id="com.mds.deekay-tool-extension.panel">
+      <DispatchInfo>
+
+        <Resources>
+          <MainPath>./client/html/index.html</MainPath>
+          <ScriptPath>./host/Main.jsxbin</ScriptPath>
+          <CEFCommandLine>
+            <Parameter>--enable-nodejs</Parameter>
+            <Parameter>--allow-file-access-from-files</Parameter>
+            <Parameter>--allow-file-access</Parameter>
+          </CEFCommandLine>
+        </Resources>
+
+        <Lifecycle>
+          <AutoVisible>true</AutoVisible>
+        </Lifecycle>
+
+        <UI>
+
+          <Type>Panel</Type>
+          <Menu>DeeKay Tool V1.1.4 墨忆汉化版</Menu>
+
+          <Geometry>
+            <Size>
+              <Height>150</Height>
+              <Width>300</Width>
+            </Size>
+            <MinSize>
+              <Height>100</Height>
+              <Width>150</Width>
+            </MinSize>
+            <MaxSize>
+              <Height>200</Height>
+              <Width>350</Width>
+            </MaxSize>
+          </Geometry>
+        </UI>
+      </DispatchInfo>
+    </Extension>
+  </DispatchInfoList>
+</ExtensionManifest>
